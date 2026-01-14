@@ -17,6 +17,7 @@ func (st *Stack) Push(value interface{}) {
 
 // Pop removes and returns the top element
 func (st *Stack) Pop() interface{} {
+
 	if len(st.elements) == 0 {
 		return nil
 	}
