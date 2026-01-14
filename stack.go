@@ -1,6 +1,9 @@
 package stack
 
-import "sync"
+import (
+	"fmt"
+	"sync"
+)
 
 // Stack represents a LIFO data structure
 type Stack struct {
@@ -49,4 +52,11 @@ func (st *Stack) Peek() interface{} {
 // IsEmpty returns true if the stack has no elements
 func (st *Stack) IsEmpty() bool {
 	return len(st.elements) == 0
+}
+
+// String returns a string representation of the stack
+func (st *Stack) String() string {
+	st.sync.RLock()
+	defer st.sync.RUnlock()
+	return fmt.Sprintf("Stack%v", st.elements)
 }
