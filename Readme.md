@@ -1,4 +1,4 @@
-# stack-lib
+# stack-lib (Open-Source Go library for Stack Datastructure)
 
 A simple, thread-safe stack (LIFO) implementation in Go.
 
